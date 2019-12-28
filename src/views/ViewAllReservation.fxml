@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="rootReservationForm" prefHeight="712.0" prefWidth="1000.0" style="-fx-background-color: #ecf0f1;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <TableView fx:id="tblReservation" layoutX="261.0" layoutY="192.0" prefHeight="302.0" prefWidth="537.0" style="-fx-background-color: white; -fx-opacity: 90%;">
+            <columns>
+                <TableColumn fx:id="tblIID" prefWidth="57.0" text="ID" />
+                <TableColumn fx:id="tblINomClient" prefWidth="97.0" text="Nom Client" />
+                <TableColumn fx:id="tblIDate" prefWidth="62.0" text="Date" />
+                <TableColumn fx:id="tblITime" prefWidth="82.0" text="Time" />
+                <TableColumn fx:id="tblINbPerson" prefWidth="115.0" text="Number Of¨Person" />
+            <TableColumn fx:id="tblIIDTable" prefWidth="127.0" text="Id_Table" />
+            </columns>
+        </TableView>
+        <Button fx:id="btnLogOut" layoutX="912.0" layoutY="-5.0" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #f22613;" text="Log Out" textFill="WHITE">
+            <font>
+                <Font name="Calibri Bold" size="17.0" />
+            </font>
+        </Button>
+        <Label layoutX="443.0" layoutY="48.0" text="Reservation" textFill="#cd1111">
+            <font>
+                <Font name="Consolas" size="26.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

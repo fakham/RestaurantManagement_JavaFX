@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="rootItemForm" prefHeight="712.0" prefWidth="1145.0" style="-fx-background-color: #ecf0f1;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="-2.0" opacity="0.9" prefHeight="712.0" prefWidth="396.0" style="-fx-background-color: #b71c1c;" />
+      <Button fx:id="btnAddItem" layoutX="63.0" layoutY="594.0" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #ffffff;" text="Add" textFill="TOMATO">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDeleteItem" layoutX="205.0" layoutY="594.0" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: white;" text="Delete" textFill="#e13737">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSearchItem" layoutX="442.0" layoutY="246.0" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #ffffff;" text="Search" textFill="TOMATO">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnUpdateItem" layoutX="565.0" layoutY="246.0" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #ffffff;" text="Update" textFill="TOMATO">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tblItem" layoutX="443.0" layoutY="370.0" prefHeight="273.0" prefWidth="536.0" style="-fx-background-color: white; -fx-opacity: 90%;">
+         <columns>
+            <TableColumn fx:id="tblICode" prefWidth="92.0" text="ID" />
+            <TableColumn fx:id="tblIDescription" prefWidth="92.0" text="Description" />
+            <TableColumn fx:id="tblIUnitPrice" prefWidth="106.0" text="Prix" />
+            <TableColumn fx:id="tblIType" prefWidth="142.0" text="Type" />
+            <TableColumn fx:id="tblIImage" prefWidth="106.0" text="Image" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnLogOut" layoutX="1033.0" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #f22613;" text="Log Out" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="17.0" />
+         </font>
+      </Button>
+      <TextField layoutX="56.0" layoutY="230.0" prefHeight="33.0" prefWidth="274.0" promptText="Description" />
+      <TextField layoutX="56.0" layoutY="299.0" prefHeight="33.0" prefWidth="274.0" promptText="Prix" />
+      <TextField layoutX="56.0" layoutY="364.0" prefHeight="33.0" prefWidth="274.0" promptText="Image" />
+      <ComboBox layoutX="56.0" layoutY="441.0" prefHeight="33.0" prefWidth="267.0" promptText="Type" />
+      <Label layoutX="63.0" layoutY="67.0" text="Add New ITEM" textFill="WHITE">
+         <font>
+            <Font name="Consolas" size="26.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="158.0" fitWidth="172.0" layoutX="636.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnLogOut1" layoutX="1033.0" layoutY="64.0" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #f22613;" text="Main" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="17.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

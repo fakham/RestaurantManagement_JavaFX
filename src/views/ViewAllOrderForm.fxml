@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="rootViewAllOrders" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: white;" styleClass="mainFxmlClass" stylesheets="Customer.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="tblOrder" layoutX="168.0" layoutY="180.0" prefHeight="369.0" prefWidth="651.0" styleClass="mainFxmlClass" stylesheets="@Customer.css">
+        <columns>
+          <TableColumn fx:id="tblOrderId" prefWidth="96.33332824707031" text="Order No" />
+          <TableColumn fx:id="tblCID" prefWidth="120.66665649414062" text="Customer ID" />
+            <TableColumn fx:id="tblCName" prefWidth="154.0" text="Customer Name" />
+            <TableColumn fx:id="tblODate" prefWidth="137.66668701171875" text="Order Date" />
+            <TableColumn prefWidth="135.0" text="Livrable" />
+        </columns>
+      </TableView>
+      <Label layoutX="211.0" layoutY="109.0" prefHeight="22.0" prefWidth="22.0" style="-fx-background-color: #ffffff;" />
+      <DatePicker fx:id="txtODate" layoutX="73.0" layoutY="87.0" prefHeight="28.0" prefWidth="160.0" promptText="Order Date" style="-fx-prompt-text-fill: #1b76ff; -fx-text-inner-color: #1b76ff;">
+
+      </DatePicker>
+      <Button fx:id="btnLogOut" layoutX="1088.0" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #f22613;" text="Log Out" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="17.0" />
+         </font>
+      </Button>
+      <Text fill="#b71c1c" fontSmoothingType="LCD" layoutX="443.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ORDER DETAILS" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas Bold" size="25.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
