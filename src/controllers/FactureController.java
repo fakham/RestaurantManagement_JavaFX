@@ -1,20 +1,23 @@
 package controllers;
 
 import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
-import models.commands.Facture;
-import services.commands.FactureService;
+import models.boissons.Boisson;
+import models.plats.entree.PlatEnt;
+import models.plats.principal.PlatPrincipal;
 import util.FactureView;
+import util.Item;
 import util.Session;
 
 import java.io.IOException;
@@ -29,31 +32,46 @@ public class FactureController implements Initializable {
     @FXML
     TableView tableFactures;
     @FXML
-    TableColumn colId;
+    TableColumn colItem;
     @FXML
-    TableColumn colIdCommand;
+    TableColumn colType;
     @FXML
-    TableColumn colTotal;
+    TableColumn colPrice;
+    @FXML
+    Label txtTotal;
+
     private ObservableList<FactureView> data = FXCollections.observableArrayList();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        colId.setCellValueFactory(new PropertyValueFactory<FactureView, Integer>("id"));
-        colIdCommand.setCellValueFactory(new PropertyValueFactory<FactureView, Integer>("commmandId"));
-        colTotal.setCellValueFactory(new PropertyValueFactory<FactureView, Double>("total"));
+        colItem.setCellValueFactory(new PropertyValueFactory<FactureView, String>("item"));
+        colType.setCellValueFactory(new PropertyValueFactory<FactureView, String>("type"));
+        colPrice.setCellValueFactory(new PropertyValueFactory<FactureView, Double>("price"));
 
-        List<Facture> factures = FactureService.getInstance().selectAll();
-        for (Facture f : factures) {
-            if (f.getCommand().getClient().getId() == Session.getConnectedClient().getId()) {
-                FactureView row = new FactureView(new SimpleIntegerProperty(f.getId()),
-                                                    new SimpleIntegerProperty(f.getCommand().getId()),
-                                                    new SimpleDoubleProperty(f.getTotal()));
+        double total = 0;
 
-                data.add(row);
-            }
+        List<Item> items = Session.getItems();
+        for (Item i : items) {
+            FactureView row = new FactureView(new SimpleStringProperty(i.getPlat().getDescription()),
+                                                new SimpleStringProperty("type"),
+                                                new SimpleDoubleProperty(i.getPlat().cost()));
+
+            if (i.getPlat() instanceof PlatPrincipal)
+                row.setType("Plat Principal");
+            else if (i.getPlat() instanceof PlatEnt)
+                row.setType("Plat Entree");
+            else if (i.getPlat() instanceof Boisson)
+                row.setType("Boisson");
+            else
+                row.setType("Dessert");
+
+            data.add(row);
+            total += row.getPrice();
         }
 
         tableFactures.setItems(data);
+
+        txtTotal.setText("Total : " + total + " DH");
     }
 
     public void menuAction(ActionEvent actionEvent) {
