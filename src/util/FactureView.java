@@ -1,52 +1,52 @@
 package util;
 
 import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 
 public class FactureView {
-    private final SimpleIntegerProperty id;
-    private final SimpleIntegerProperty commandId;
-    private final SimpleDoubleProperty total;
+    private final SimpleStringProperty item;
+    private final SimpleStringProperty type;
+    private final SimpleDoubleProperty price;
 
-    public FactureView(SimpleIntegerProperty id, SimpleIntegerProperty commandId, SimpleDoubleProperty total) {
-        this.id = id;
-        this.commandId = commandId;
-        this.total = total;
+    public FactureView(SimpleStringProperty item, SimpleStringProperty type, SimpleDoubleProperty price) {
+        this.item = item;
+        this.type = type;
+        this.price = price;
     }
 
-    public int getId() {
-        return id.get();
+    public String getItem() {
+        return item.get();
     }
 
-    public SimpleIntegerProperty idProperty() {
-        return id;
+    public SimpleStringProperty itemProperty() {
+        return item;
     }
 
-    public void setId(int id) {
-        this.id.set(id);
+    public void setItem(String item) {
+        this.item.set(item);
     }
 
-    public int getCommandId() {
-        return commandId.get();
+    public String getType() {
+        return type.get();
     }
 
-    public SimpleIntegerProperty commandIdProperty() {
-        return commandId;
+    public SimpleStringProperty typeProperty() {
+        return type;
     }
 
-    public void setCommandId(int commandId) {
-        this.commandId.set(commandId);
+    public void setType(String type) {
+        this.type.set(type);
     }
 
-    public double getTotal() {
-        return total.get();
+    public double getPrice() {
+        return price.get();
     }
 
-    public SimpleDoubleProperty totalProperty() {
-        return total;
+    public SimpleDoubleProperty priceProperty() {
+        return price;
     }
 
-    public void setTotal(double total) {
-        this.total.set(total);
+    public void setPrice(double price) {
+        this.price.set(price);
     }
 }
