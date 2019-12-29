@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.5.5-10.4.10-MariaDB)
 # Database: restaurant
-# Generation Time: 2019-12-28 20:38:18 +0000
+# Generation Time: 2019-12-29 22:13:42 +0000
 # ************************************************************
 
 
@@ -23,8 +23,6 @@
 # Dump of table COMMAND_DETAILS
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `COMMAND_DETAILS`;
-
 CREATE TABLE `COMMAND_DETAILS` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `ID_ITEM` int(11) NOT NULL,
@@ -39,11 +37,8 @@ CREATE TABLE `COMMAND_DETAILS` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
-
 # Dump of table COMMANDS
 # ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `COMMANDS`;
 
 CREATE TABLE `COMMANDS` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
@@ -56,11 +51,8 @@ CREATE TABLE `COMMANDS` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
-
 # Dump of table FACTURES
 # ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `FACTURES`;
 
 CREATE TABLE `FACTURES` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
@@ -82,17 +74,39 @@ CREATE TABLE `ITEMS` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `PRICE` float DEFAULT NULL,
   `DESCRIPTION` varchar(50) DEFAULT NULL,
-  `TYPE` varchar(10) DEFAULT NULL,
+  `TYPE` varchar(30) DEFAULT NULL,
   `IMAGE` longblob DEFAULT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+LOCK TABLES `ITEMS` WRITE;
+/*!40000 ALTER TABLE `ITEMS` DISABLE KEYS */;
+
+INSERT INTO `ITEMS` (`ID`, `PRICE`, `DESCRIPTION`, `TYPE`, `IMAGE`)
+VALUES
+	(2,20,'Cola','Boisson',NULL),
+	(3,20,'Fanta','Boisson',NULL),
+	(4,30,'Coffee','Boisson',NULL),
+	(5,20,'Sprite','Boisson',NULL),
+	(6,30,'The','Boisson',NULL),
+	(7,60,'Chef Salad','Plat Entree',NULL),
+	(8,60,'Green Salad','Plat Entree',NULL),
+	(9,60,'Pasta Salad','Plat Entree',NULL),
+	(10,120,'Cheese Pizza','Plat Principal',NULL),
+	(11,120,'Formaggio Pizza','Plat Principal',NULL),
+	(12,120,'Pizza Fruit De Mer','Plat Principal',NULL),
+	(13,120,'Frutti Di Mare','Plat Principal',NULL),
+	(14,80,'Pancake Circulaire, Nutella','Dessert',NULL),
+	(15,80,'Pancake Circulaire, Kiwi','Dessert',NULL),
+	(16,80,'Pancake Circulaire, Strawberry','Dessert',NULL),
+	(17,80,'Pancake Circulaire, Caramel','Dessert',NULL);
+
+/*!40000 ALTER TABLE `ITEMS` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table RESERVATIONS
 # ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `RESERVATIONS`;
 
 CREATE TABLE `RESERVATIONS` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
@@ -109,7 +123,6 @@ CREATE TABLE `RESERVATIONS` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
-
 # Dump of table TABLES
 # ------------------------------------------------------------
 
@@ -121,12 +134,21 @@ CREATE TABLE `TABLES` (
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+LOCK TABLES `TABLES` WRITE;
+/*!40000 ALTER TABLE `TABLES` DISABLE KEYS */;
+
+INSERT INTO `TABLES` (`ID`, `DESCRIPTION`)
+VALUES
+	(1,'Table 1'),
+	(2,'Table 2'),
+	(3,'Table 3');
+
+/*!40000 ALTER TABLE `TABLES` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table USERS
 # ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `USERS`;
 
 CREATE TABLE `USERS` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
