@@ -79,7 +79,7 @@ public class PlatPrincipalService implements Service<PlatPrincipal> {
 
                 PlatPrincipal platEnt = null;
 
-                if (type == PizzaType.CHEESE || type == PizzaType.FRUIT_DE_MER)
+                if (type == PizzaType.CHEESE_PIZZA || type == PizzaType.PIZZA_FRUIT_DE_MER)
                     platEnt = FrenchFactory.getInstance().createPizza(PizzaType.valueOf(resultSet.getString("description")));
                 else
                     platEnt = ItalianFactory.getInstance().createPizza(PizzaType.valueOf(resultSet.getString("description")));
@@ -114,14 +114,14 @@ public class PlatPrincipalService implements Service<PlatPrincipal> {
         try {
             if (resultSet.next()) {
 
-                PizzaType type = PizzaType.valueOf(resultSet.getString("description"));
+                PizzaType type = PizzaType.valueOf(resultSet.getString("description").replace(" ", "_").toUpperCase());
 
                 PlatPrincipal platEnt = null;
 
-                if (type == PizzaType.CHEESE || type == PizzaType.FRUIT_DE_MER)
-                    platEnt = FrenchFactory.getInstance().createPizza(PizzaType.valueOf(resultSet.getString("description")));
+                if (type == PizzaType.CHEESE_PIZZA || type == PizzaType.PIZZA_FRUIT_DE_MER)
+                    platEnt = FrenchFactory.getInstance().createPizza(PizzaType.valueOf(resultSet.getString("description").replace(" ", "_").toUpperCase()));
                 else
-                    platEnt = ItalianFactory.getInstance().createPizza(PizzaType.valueOf(resultSet.getString("description")));
+                    platEnt = ItalianFactory.getInstance().createPizza(PizzaType.valueOf(resultSet.getString("description").replace(" ", "_").toUpperCase()));
 
                 platEnt.setId(resultSet.getInt("id"));
 

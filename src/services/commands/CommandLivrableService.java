@@ -29,12 +29,14 @@ public class CommandLivrableService implements Service<CommandLivrable> {
     @Override
     public CommandLivrable create(CommandLivrable object) {
 
-        String query = String.format("INSERT INTO models.commands(id_client, date, livrable) VALUES(%d, '%s', %d)",
-                object.getClient().getId(), object.getDate().toString(), 1);
+        java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+        String query = String.format("INSERT INTO commands(id_client, date, livrable) VALUES(%d, '%s', %d)",
+                object.getClient().getId(), sdf.format(object.getDate()), 1);
 
         connection.nonSelectQuery(query);
 
-        query = "SELECT * FROM models.commands ORDER BY id DESC";
+        query = "SELECT * FROM commands ORDER BY id DESC";
 
         ResultSet resultSet = connection.selectQuery(query);
 
@@ -51,7 +53,7 @@ public class CommandLivrableService implements Service<CommandLivrable> {
 
     @Override
     public void update(CommandLivrable object) {
-        String query = String.format("UPDATE models.commands SET id_client = %d, date = '%s' WHERE id = %d",
+        String query = String.format("UPDATE commands SET id_client = %d, date = '%s' WHERE id = %d",
                 object.getClient().getId(), object.getDate().toString(), object.getId());
 
         connection.nonSelectQuery(query);
@@ -59,14 +61,14 @@ public class CommandLivrableService implements Service<CommandLivrable> {
 
     @Override
     public void delete(int id) {
-        String query = String.format("DELETE FROM models.commands WHERE id = %d", id);
+        String query = String.format("DELETE FROM commands WHERE id = %d", id);
 
         connection.nonSelectQuery(query);
     }
 
     @Override
     public CommandLivrable selectOne(int id) {
-        String query = String.format("SELECT * FROM models.commands WHERE id = %d", id);
+        String query = String.format("SELECT * FROM commands WHERE id = %d", id);
 
         ResultSet resultSet = connection.selectQuery(query);
 
@@ -98,7 +100,7 @@ public class CommandLivrableService implements Service<CommandLivrable> {
     public List<CommandLivrable> filter(String whereQuery) {
         List<CommandLivrable> commandLivrables = new ArrayList<>();
 
-        String query = "SELECT * FROM models.commands WHERE " + whereQuery;
+        String query = "SELECT * FROM commands WHERE " + whereQuery;
 
         ResultSet resultSet = connection.selectQuery(query);
 

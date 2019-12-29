@@ -30,12 +30,14 @@ public class CommandSurplaceService implements Service<CommandSurplace> {
     @Override
     public CommandSurplace create(CommandSurplace object) {
 
-        String query = String.format("INSERT INTO models.commands(id_client, date, livrable) VALUES(%d, '%s', %d)",
-                object.getClient().getId(), object.getDate().toString(), 0);
+        java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+        String query = String.format("INSERT INTO commands(id_client, date, livrable) VALUES(%d, '%s', %d)",
+                object.getClient().getId(), sdf.format(object.getDate()), 0);
 
         connection.nonSelectQuery(query);
 
-        query = "SELECT * FROM models.commands ORDER BY id DESC";
+        query = "SELECT * FROM commands ORDER BY id DESC";
 
         ResultSet resultSet = connection.selectQuery(query);
 
@@ -52,7 +54,7 @@ public class CommandSurplaceService implements Service<CommandSurplace> {
 
     @Override
     public void update(CommandSurplace object) {
-        String query = String.format("UPDATE models.commands SET id_client = %d, date = '%s' WHERE id = %d",
+        String query = String.format("UPDATE commands SET id_client = %d, date = '%s' WHERE id = %d",
                 object.getClient().getId(), object.getDate().toString(), object.getId());
 
         connection.nonSelectQuery(query);
@@ -60,14 +62,14 @@ public class CommandSurplaceService implements Service<CommandSurplace> {
 
     @Override
     public void delete(int id) {
-        String query = String.format("DELETE FROM models.commands WHERE id = %d", id);
+        String query = String.format("DELETE FROM commands WHERE id = %d", id);
 
         connection.nonSelectQuery(query);
     }
 
     @Override
     public CommandSurplace selectOne(int id) {
-        String query = String.format("SELECT * FROM models.commands WHERE id = %d", id);
+        String query = String.format("SELECT * FROM commands WHERE id = %d", id);
 
         ResultSet resultSet = connection.selectQuery(query);
 
@@ -100,7 +102,7 @@ public class CommandSurplaceService implements Service<CommandSurplace> {
     public List<CommandSurplace> filter(String whereQuery) {
         List<CommandSurplace> commandSurplaces = new ArrayList<>();
 
-        String query = "SELECT * FROM models.commands WHERE " + whereQuery;
+        String query = "SELECT * FROM commands WHERE " + whereQuery;
 
         ResultSet resultSet = connection.selectQuery(query);
 

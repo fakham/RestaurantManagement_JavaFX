@@ -106,7 +106,7 @@ public class BoissonService implements Service<Boisson> {
         try {
             if (resultSet.next()) {
 
-                Boisson boisson = BoissonFactory.getInstance().makeBoisson(BoissonType.valueOf(resultSet.getString("description")));
+                Boisson boisson = BoissonFactory.getInstance().makeBoisson(BoissonType.valueOf(resultSet.getString("description").toUpperCase()));
 
                 boisson.setId(resultSet.getInt("id"));
 

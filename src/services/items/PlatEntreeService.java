@@ -106,7 +106,7 @@ public class PlatEntreeService implements Service<PlatEnt> {
         try {
             if (resultSet.next()) {
 
-                PlatEnt platEnt = SaladFactory.getInstance().makeSalad(SaladType.valueOf(resultSet.getString("description")));
+                PlatEnt platEnt = SaladFactory.getInstance().makeSalad(SaladType.valueOf(resultSet.getString("description").replace(" ", "_").toUpperCase()));
 
                 platEnt.setId(resultSet.getInt("id"));
 
