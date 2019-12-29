@@ -9,7 +9,7 @@
 
 <AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
             prefHeight="600.0" prefWidth="1033.0" xmlns="http://javafx.com/javafx/8.0.171"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.BoissonsController">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DessertsController">
     <children>
         <AnchorPane prefHeight="600.0" prefWidth="227.0" style="-fx-background-color: #b71c1c;">
             <children>
@@ -37,11 +37,11 @@
         <ImageView fitHeight="133.0" fitWidth="187.0" layoutX="275.0" layoutY="34.0" pickOnBounds="true"
                    preserveRatio="true">
             <image>
-                <Image url="@../images/coffee.jpeg"/>
+                <Image url="@../images/pancake_nutella.jpg"/>
             </image>
         </ImageView>
-        <Button fx:id="btnCoffee" layoutX="325.0" layoutY="197.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="86.0"
-                style="-fx-background-color: GOLD;" text="Coffee">
+        <Button fx:id="btnNuttela" layoutX="317.0" layoutY="197.0" mnemonicParsing="false" prefHeight="28.0"
+                prefWidth="105.0" style="-fx-background-color: GOLD;" text="Pancake Nuttela" onAction="#dessertAction">
             <font>
                 <Font name="Consolas Bold" size="12.0"/>
             </font>
@@ -51,53 +51,39 @@
         <ImageView fitHeight="125.0" fitWidth="187.0" layoutX="525.0" layoutY="41.0" pickOnBounds="true"
                    preserveRatio="true">
             <image>
-                <Image url="@../images/tea.jpg"/>
+                <Image url="@../images/pancake_caramel.jpg"/>
             </image>
         </ImageView>
-        <Button fx:id="btnTea" layoutX="576.0" layoutY="197.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="86.0"
-                style="-fx-background-color: GOLD;" text="Tea">
-            <font>
-                <Font name="Consolas Bold" size="12.0"/>
-            </font>
-        </Button>
         <Label layoutX="758.0" layoutY="24.0" prefHeight="216.0" prefWidth="234.0"
                style="-fx-background-color: SILVER;"/>
         <ImageView fitHeight="125.0" fitWidth="187.0" layoutX="782.0" layoutY="43.0" pickOnBounds="true"
                    preserveRatio="true">
             <image>
-                <Image url="@../images/fanta.jpg"/>
+                <Image url="@../images/pancake_kiwi.jpg"/>
             </image>
         </ImageView>
-        <Button fx:id="btnFanta" layoutX="832.0" layoutY="197.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="86.0"
-                style="-fx-background-color: GOLD;" text="Fanta">
-            <font>
-                <Font name="Consolas Bold" size="12.0"/>
-            </font>
-        </Button>
         <Label layoutX="252.0" layoutY="272.0" prefHeight="216.0" prefWidth="234.0"
                style="-fx-background-color: SILVER;"/>
         <ImageView fitHeight="133.0" fitWidth="187.0" layoutX="276.0" layoutY="284.0" pickOnBounds="true"
                    preserveRatio="true">
             <image>
-                <Image url="@../images/cola.jpg"/>
+                <Image url="@../images/pancake_strawberry.jpg"/>
             </image>
         </ImageView>
-        <Label layoutX="501.0" layoutY="272.0" prefHeight="216.0" prefWidth="234.0"
-               style="-fx-background-color: SILVER;"/>
-        <ImageView fitHeight="125.0" fitWidth="187.0" layoutX="556.0" layoutY="284.0" pickOnBounds="true"
-                   preserveRatio="true">
-            <image>
-                <Image url="@../images/sprite.jpg"/>
-            </image>
-        </ImageView>
-        <Button fx:id="btnCola" layoutX="327.0" layoutY="441.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="86.0"
-                style="-fx-background-color: GOLD;" text="Cola">
+        <Button fx:id="btnCaramel" layoutX="566.0" layoutY="197.0" mnemonicParsing="false" prefHeight="28.0"
+                prefWidth="105.0" style="-fx-background-color: GOLD;" text="Pancake Caramel" onAction="#dessertAction">
             <font>
                 <Font name="Consolas Bold" size="12.0"/>
             </font>
         </Button>
-        <Button fx:id="btnSprite" layoutX="576.0" layoutY="441.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="86.0"
-                style="-fx-background-color: GOLD;" text="Sprite">
+        <Button fx:id="btnKiwi" layoutX="823.0" layoutY="197.0" mnemonicParsing="false" prefHeight="28.0"
+                prefWidth="105.0" style="-fx-background-color: GOLD;" text="Pancake Kiwi" onAction="#dessertAction">
+            <font>
+                <Font name="Consolas Bold" size="12.0"/>
+            </font>
+        </Button>
+        <Button fx:id="btnStrawberry" layoutX="309.0" layoutY="441.0" mnemonicParsing="false" prefHeight="28.0"
+                prefWidth="125.0" style="-fx-background-color: GOLD;" text="Pancake Strawberry" onAction="#dessertAction">
             <font>
                 <Font name="Consolas Bold" size="12.0"/>
             </font>
