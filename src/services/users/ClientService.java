@@ -29,12 +29,12 @@ public class ClientService implements Service<Client> {
     @Override
     public Client create(Client object) {
 
-        String query = String.format("INSERT INTO models.users(first_name, last_name, username, email, password, role) VALUES('%s', '%s', '%s', '%s', '%s', '%s')",
+        String query = String.format("INSERT INTO users(first_name, last_name, username, email, password, role) VALUES('%s', '%s', '%s', '%s', '%s', '%s')",
                                     object.getFirstName(), object.getLastName(), object.getUsername(), object.getEmail(), object.getPassword(), ROLE);
 
         connection.nonSelectQuery(query);
 
-        query = "SELECT * FROM models.users ORDER BY id DESC";
+        query = "SELECT * FROM users ORDER BY id DESC";
 
         ResultSet resultSet = connection.selectQuery(query);
 
@@ -52,7 +52,7 @@ public class ClientService implements Service<Client> {
     @Override
     public void update(Client object) {
 
-        String query = String.format("UPDATE models.users SET first_name = '%s', last_name = '%s', username = '%s', email = '%s', password = '%s' WHERE id = %d",
+        String query = String.format("UPDATE users SET first_name = '%s', last_name = '%s', username = '%s', email = '%s', password = '%s' WHERE id = %d",
                 object.getFirstName(), object.getLastName(), object.getUsername(), object.getEmail(), object.getPassword(), object.getId());
 
         connection.nonSelectQuery(query);
@@ -61,7 +61,7 @@ public class ClientService implements Service<Client> {
 
     @Override
     public void delete(int id) {
-        String query = String.format("DELETE FROM models.users WHERE id = %d", id);
+        String query = String.format("DELETE FROM users WHERE id = %d", id);
 
         connection.nonSelectQuery(query);
     }
@@ -69,7 +69,7 @@ public class ClientService implements Service<Client> {
     @Override
     public Client selectOne(int id) {
 
-        String query = String.format("SELECT * FROM models.users WHERE id = %d", id);
+        String query = String.format("SELECT * FROM users WHERE id = %d", id);
 
         ResultSet resultSet = connection.selectQuery(query);
 
@@ -104,7 +104,7 @@ public class ClientService implements Service<Client> {
 
         List<Client> clients = new ArrayList<>();
 
-        String query = "SELECT * FROM models.users WHERE " + whereQuery;
+        String query = "SELECT * FROM users WHERE " + whereQuery;
 
         ResultSet resultSet = connection.selectQuery(query);
 
