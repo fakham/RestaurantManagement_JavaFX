@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="root" prefHeight="712.0" prefWidth="1000.0" style="-fx-background-color: #ecf0f1;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.201" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ViewAllReservationController">
+<AnchorPane fx:id="root" prefHeight="600.0" prefWidth="1291.0" style="-fx-background-color: #ecf0f1;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ViewAllReservationController">
     <children>
         <TableView fx:id="tableReservations" layoutX="261.0" layoutY="192.0" prefHeight="302.0" prefWidth="537.0" style="-fx-background-color: white; -fx-opacity: 90%;">
             <columns>
@@ -19,7 +16,7 @@
                 <TableColumn fx:id="colIdTable" prefWidth="127.0" text="ID Table" />
             </columns>
         </TableView>
-        <Button fx:id="btnLogOut" layoutX="907.0" layoutY="5.0" onAction="#logOutAction" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #f22613;" text="Log Out" textFill="WHITE">
+        <Button fx:id="btnLogOut" layoutX="1179.0" onAction="#logOutAction" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #f22613;" text="Log Out" textFill="WHITE">
             <font>
                 <Font name="Calibri Bold" size="17.0" />
             </font>
