@@ -31,13 +31,13 @@ public class ReservationService implements Service<Reservation> {
     @Override
     public Reservation create(Reservation object) {
 
-        String query = String.format("INSERT INTO models.reservations(time, number, date, id_client, id_table) VALUES('%s', %d, '%s', %d, %d)",
+        String query = String.format("INSERT INTO reservations(time, number, date, id_client, id_table) VALUES('%s', %d, '%s', %d, %d)",
                 object.getTime().format(DateTimeFormatter.ISO_TIME), object.getNumberOfPersons(), object.getTime().format(DateTimeFormatter.ISO_DATE),
                 object.getClient().getId(), object.getTable().getId());
 
         connection.nonSelectQuery(query);
 
-        query = "SELECT * FROM models.reservations ORDER BY id DESC";
+        query = "SELECT * FROM reservations ORDER BY id DESC";
 
         ResultSet resultSet = connection.selectQuery(query);
 
@@ -54,7 +54,7 @@ public class ReservationService implements Service<Reservation> {
 
     @Override
     public void update(Reservation object) {
-        String query = String.format("UPDATE models.reservations SET date = '%s', time = '%s', number = %d, id_client = %d, id_table = %d WHERE id = %d",
+        String query = String.format("UPDATE reservations SET date = '%s', time = '%s', number = %d, id_client = %d, id_table = %d WHERE id = %d",
                 object.getTime().format(DateTimeFormatter.ISO_DATE), object.getTime().format(DateTimeFormatter.ISO_TIME),
                 object.getNumberOfPersons(), object.getClient().getId(), object.getTable().getId(), object.getId());
 
@@ -63,7 +63,7 @@ public class ReservationService implements Service<Reservation> {
 
     @Override
     public void delete(int id) {
-        String query = String.format("DELETE FROM models.reservations WHERE id = %d", id);
+        String query = String.format("DELETE FROM reservations WHERE id = %d", id);
 
         connection.nonSelectQuery(query);
     }
@@ -71,7 +71,7 @@ public class ReservationService implements Service<Reservation> {
     @Override
     public Reservation selectOne(int id) {
 
-        String query = String.format("SELECT * FROM models.reservations WHERE id = %d", id);
+        String query = String.format("SELECT * FROM reservations WHERE id = %d", id);
 
         ResultSet resultSet = connection.selectQuery(query);
 
@@ -106,7 +106,7 @@ public class ReservationService implements Service<Reservation> {
 
         List<Reservation> reservations = new ArrayList<>();
 
-        String query = "SELECT * FROM models.reservations WHERE " + whereQuery;
+        String query = "SELECT * FROM reservations WHERE " + whereQuery;
 
         ResultSet resultSet = connection.selectQuery(query);
 

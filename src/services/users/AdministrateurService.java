@@ -90,14 +90,14 @@ public class AdministrateurService implements Service<Administrateur> {
 
     @Override
     public List<Administrateur> selectAll() {
-        return filter("1 = 1");
+        return filter("role = '" + ROLE + "'");
     }
 
     @Override
     public List<Administrateur> filter(String whereQuery) {
         List<Administrateur> administrateurs = new ArrayList<>();
 
-        String query = "SELECT * FROM users WHERE " + whereQuery;
+        String query = "SELECT * FROM users WHERE role = '" + ROLE + "' and " + whereQuery;
 
         ResultSet resultSet = connection.selectQuery(query);
 

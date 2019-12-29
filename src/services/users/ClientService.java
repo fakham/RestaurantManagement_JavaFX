@@ -95,7 +95,7 @@ public class ClientService implements Service<Client> {
     @Override
     public List<Client> selectAll() {
 
-        return filter("1 = 1");
+        return filter("role = '" + ROLE + "'");
 
     }
 
@@ -104,7 +104,7 @@ public class ClientService implements Service<Client> {
 
         List<Client> clients = new ArrayList<>();
 
-        String query = "SELECT * FROM users WHERE " + whereQuery;
+        String query = "SELECT * FROM users WHERE role = '" + ROLE + "' and " + whereQuery;
 
         ResultSet resultSet = connection.selectQuery(query);
 

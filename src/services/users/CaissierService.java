@@ -97,14 +97,14 @@ public class CaissierService implements Service<Caissier> {
 
     @Override
     public List<Caissier> selectAll() {
-        return filter("1 = 1");
+        return filter("role = '" + ROLE + "'");
     }
 
     @Override
     public List<Caissier> filter(String whereQuery) {
         List<Caissier> caissiers = new ArrayList<>();
 
-        String query = "SELECT * FROM users WHERE " + whereQuery;
+        String query = "SELECT * FROM users WHERE role = '" + ROLE + "' and " + whereQuery;
 
         ResultSet resultSet = connection.selectQuery(query);
 

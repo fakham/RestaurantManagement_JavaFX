@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" fx:id="rootTopMovingItem" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #ecf0f1;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #ecf0f1;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TopMovingItemFormController">
 
    <children>
       <PieChart fx:id="pchaPizza" labelsVisible="false" layoutX="335.0" layoutY="76.0" onMouseEntered="#itemDetailsEvent" prefHeight="459.0" prefWidth="608.0" />
@@ -18,7 +18,12 @@
          </font>
       </Text>
       <Label layoutX="507.0" layoutY="552.0" opacity="0.9" prefHeight="22.0" prefWidth="41.0" style="-fx-background-color: #ecf0f1;" />
-      <Button fx:id="btnLogOut" layoutX="1097.0" layoutY="-2.0" onAction="#btnLogOut" prefHeight="33.0" prefWidth="103.0" style="-fx-background-color: #f22613;" text="Log Out" textFill="WHITE">
+      <Button fx:id="btnLogOut" layoutX="1058.0" layoutY="3.0" onAction="#btnLogOut" prefHeight="34.0" prefWidth="139.0" style="-fx-background-color: #f22613;" text="Log Out" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnAdminMenu" layoutX="1059.0" layoutY="48.0" onAction="#menuAction" prefHeight="34.0" prefWidth="139.0" style="-fx-background-color: #f22613;" text="Admin Menu" textFill="WHITE">
          <font>
             <Font name="Calibri Bold" size="17.0" />
          </font>

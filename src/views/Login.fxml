@@ -6,7 +6,7 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8"
-            xmlns:fx="http://javafx.com/fxml/1">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController" fx:id="root">
     <children>
         <Label prefHeight="500.0" prefWidth="376.0" style="-fx-background-color: #b71c1c;" textFill="#460101"/>
         <ImageView fitHeight="241.0" fitWidth="241.0" layoutX="45.0" layoutY="112.0" pickOnBounds="true"
@@ -15,19 +15,20 @@
                 <Image url="@../images/logo.png"/>
             </image>
         </ImageView>
-        <TextField fx:id="username" layoutX="459.0" layoutY="159.0" prefHeight="36.0" prefWidth="204.0"
-                   promptText="Username"/>
-        <PasswordField fx:id="password" layoutX="459.0" layoutY="232.0" prefHeight="36.0" prefWidth="204.0"
+        <TextField fx:id="txtEmail" layoutX="459.0" layoutY="100.0" prefHeight="36.0" prefWidth="204.0"
+                   promptText="Email"/>
+        <PasswordField fx:id="txtPassword" layoutX="459.0" layoutY="170.0" prefHeight="36.0" prefWidth="204.0"
                        promptText="Password"/>
+        <ComboBox fx:id="comboRole" layoutX="459.0" layoutY="240.0" prefHeight="36.0" prefWidth="204.0" promptText="Role" />
         <Button fx:id="btnLogin" layoutX="518.0" layoutY="309.0" mnemonicParsing="false" prefHeight="30.0"
                 prefWidth="86.0" style="-fx-background-color: #b71c1c;" styleClass="btnGreen" text="Sign In"
-                textFill="WHITE">
+                textFill="WHITE" onAction="#loginAction">
             <font>
                 <Font name="Comic Sans MS" size="14.0"/>
             </font>
         </Button>
-        <Button layoutX="611.0" layoutY="404.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="66.0"
-                style="-fx-background-color: #b71c1c;" text="Sign Up" textFill="WHITE">
+        <Button fx:id="btnSignUp" layoutX="611.0" layoutY="404.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="66.0"
+                style="-fx-background-color: #b71c1c;" text="Sign Up" textFill="WHITE" onAction="#signUpAction">
             <font>
                 <Font name="Comic Sans MS" size="13.0"/>
             </font>
