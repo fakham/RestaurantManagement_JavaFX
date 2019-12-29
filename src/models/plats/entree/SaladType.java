@@ -2,7 +2,7 @@ package models.plats.entree;
 
 public enum SaladType {
 
-    CHEF("Chef Salad"), GREEN("Green Salad"), PASTA("Pasta Salad");
+    CHEF_SALAD("Chef Salad"), GREEN_SALAD("Green Salad"), PASTA_SALAD("Pasta Salad");
 
     private String name;
 

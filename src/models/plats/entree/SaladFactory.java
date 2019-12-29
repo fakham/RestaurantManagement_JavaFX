@@ -19,11 +19,11 @@ public class SaladFactory {
     public Salad makeSalad(SaladType SaladType) {
 
         switch (SaladType) {
-            case CHEF:
+            case CHEF_SALAD:
                 return new ChefSalad();
-            case GREEN:
+            case GREEN_SALAD:
                 return new GreenSalad();
-            case PASTA:
+            case PASTA_SALAD:
                 return new PastaSalad();
         }
 

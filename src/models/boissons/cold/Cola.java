@@ -9,7 +9,7 @@ public class Cola extends ColdBoisson {
 
     @Override
     public String getDescription() {
-        return "Coca Cola";
+        return "Cola";
     }
 
     @Override

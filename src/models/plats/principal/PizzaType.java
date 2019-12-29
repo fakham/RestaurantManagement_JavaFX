@@ -1,7 +1,7 @@
 package models.plats.principal;
 
 public enum PizzaType {
-    FORMAGGIO("Formaggio Pizza"), FRUTTI_DI_MARE("Frutti Di Mare"), CHEESE("Cheese Pizza"), FRUIT_DE_MER("Pizza Fruit De Mer");
+    FORMAGGIO_PIZZA("Formaggio Pizza"), FRUTTI_DI_MARE("Frutti Di Mare"), CHEESE_PIZZA("Cheese Pizza"), PIZZA_FRUIT_DE_MER("Pizza Fruit De Mer");
 
     private String name;
 

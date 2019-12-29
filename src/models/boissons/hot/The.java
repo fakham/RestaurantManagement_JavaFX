@@ -19,7 +19,7 @@ public class The extends HotBoisson{
 
     @Override
     public String getDescription() {
-        return "Thé";
+        return "The";
     }
 
     @Override

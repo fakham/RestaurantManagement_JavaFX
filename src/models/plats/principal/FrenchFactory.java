@@ -19,9 +19,9 @@ public class FrenchFactory implements PlatPrincipalFactory {
     @Override
     public Pizza createPizza(PizzaType type) {
         switch (type) {
-            case CHEESE:
+            case CHEESE_PIZZA:
                 return new CheesePizza();
-            case FRUIT_DE_MER:
+            case PIZZA_FRUIT_DE_MER:
                 return new FruitDeMerPizza();
 
         }

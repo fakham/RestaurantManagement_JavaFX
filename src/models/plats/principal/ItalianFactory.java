@@ -20,7 +20,7 @@ public class ItalianFactory implements PlatPrincipalFactory {
     public Pizza createPizza(PizzaType type) {
 
         switch (type) {
-            case FORMAGGIO:
+            case FORMAGGIO_PIZZA:
                 return new Formaggio();
             case FRUTTI_DI_MARE:
                 return new FruttiDiMare();
