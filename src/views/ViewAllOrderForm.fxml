@@ -19,12 +19,12 @@
         <DatePicker fx:id="txtODate" layoutX="73.0" layoutY="87.0" onAction="#loadOrdersByDate" prefHeight="28.0" prefWidth="160.0" promptText="Order Date" style="-fx-prompt-text-fill: #1b76ff; -fx-text-inner-color: #1b76ff;">
 
         </DatePicker>
-        <Button fx:id="btnLogOut" layoutX="1146.0" layoutY="8.0" onAction="#logOutAction" prefHeight="34.0" prefWidth="139.0" style="-fx-background-color: #f22613;" text="Log Out" textFill="WHITE">
+        <Button fx:id="btnLogOut" layoutX="869.0" layoutY="6.0" onAction="#logOutAction" prefHeight="34.0" prefWidth="139.0" style="-fx-background-color: #f22613;" text="Log Out" textFill="WHITE">
             <font>
                 <Font name="Calibri Bold" size="17.0" />
             </font>
         </Button>
-        <Button fx:id="btnAdminMenu" layoutX="1146.0" layoutY="58.0" onAction="#menuAction" prefHeight="34.0" prefWidth="139.0" style="-fx-background-color: #f22613;" text="Admin Menu" textFill="WHITE">
+        <Button fx:id="btnAdminMenu" layoutX="1016.0" layoutY="6.0" onAction="#menuAction" prefHeight="34.0" prefWidth="139.0" style="-fx-background-color: #f22613;" text="Admin Menu" textFill="WHITE">
             <font>
                 <Font name="Calibri Bold" size="17.0" />
             </font>

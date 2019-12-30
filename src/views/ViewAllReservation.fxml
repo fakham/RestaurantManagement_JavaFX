@@ -16,7 +16,7 @@
                 <TableColumn fx:id="colIdTable" prefWidth="127.0" text="ID Table" />
             </columns>
         </TableView>
-        <Button fx:id="btnLogOut" layoutX="1179.0" onAction="#logOutAction" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #f22613;" text="Log Out" textFill="WHITE">
+        <Button fx:id="btnLogOut" layoutX="951.0" onAction="#logOutAction" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #f22613;" text="Log Out" textFill="WHITE">
             <font>
                 <Font name="Calibri Bold" size="17.0" />
             </font>

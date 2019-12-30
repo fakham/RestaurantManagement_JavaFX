@@ -31,7 +31,7 @@
             <TableColumn fx:id="colType" prefWidth="136.0" text="Type" />
          </columns>
       </TableView>
-      <Button fx:id="btnLogOut" layoutX="1179.0" layoutY="4.0" onAction="#logOutAction" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #f22613;" text="Log Out" textFill="WHITE">
+      <Button fx:id="btnLogOut" layoutX="887.0" layoutY="4.0" onAction="#logOutAction" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #f22613;" text="Log Out" textFill="WHITE">
          <font>
             <Font name="Calibri Bold" size="17.0" />
          </font>
@@ -49,7 +49,7 @@
             <Image url="@../images/logo.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnMenu" layoutX="1179.0" layoutY="48.0" onAction="#menuAction" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #f22613;" text="Main" textFill="WHITE">
+      <Button fx:id="btnMenu" layoutX="1012.0" layoutY="4.0" onAction="#menuAction" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #f22613;" text="Main" textFill="WHITE">
          <font>
             <Font name="Calibri Bold" size="17.0" />
          </font>

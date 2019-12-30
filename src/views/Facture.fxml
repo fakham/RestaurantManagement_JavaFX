@@ -16,8 +16,7 @@
                <TableColumn fx:id="colPrice" prefWidth="227.0" text="Price" />
            </columns>
        </TableView>
-      <Button layoutX="615.0" layoutY="27.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="114.0" text="Imprimer" />
-       <Button layoutX="480.0" layoutY="27.0" mnemonicParsing="false" onAction="#menuAction" prefHeight="37.0" prefWidth="114.0" text="Menu" />
+      <Button layoutX="615.0" layoutY="27.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="114.0" text="Menu" onAction="#menuAction" />
       <Label fx:id="txtTotal" layoutX="594.0" layoutY="386.0" text="Total : 0 DH">
          <font>
             <Font size="17.0" />

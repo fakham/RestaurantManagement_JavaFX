@@ -17,12 +17,12 @@
          </font>
       </Text>
       <Label layoutX="507.0" layoutY="552.0" opacity="0.9" prefHeight="22.0" prefWidth="41.0" style="-fx-background-color: #ecf0f1;" />
-      <Button fx:id="btnLogOut" layoutX="1144.0" layoutY="4.0" onAction="#btnLogOut" prefHeight="34.0" prefWidth="139.0" style="-fx-background-color: #f22613;" text="Log Out" textFill="WHITE">
+      <Button fx:id="btnLogOut" layoutX="835.0" layoutY="-3.0" onAction="#btnLogOut" prefHeight="34.0" prefWidth="139.0" style="-fx-background-color: #f22613;" text="Log Out" textFill="WHITE">
          <font>
             <Font name="Calibri Bold" size="17.0" />
          </font>
       </Button>
-      <Button fx:id="btnAdminMenu" layoutX="1144.0" layoutY="42.0" onAction="#menuAction" prefHeight="34.0" prefWidth="139.0" style="-fx-background-color: #f22613;" text="Admin Menu" textFill="WHITE">
+      <Button fx:id="btnAdminMenu" layoutX="986.0" layoutY="-3.0" onAction="#menuAction" prefHeight="34.0" prefWidth="139.0" style="-fx-background-color: #f22613;" text="Admin Menu" textFill="WHITE">
          <font>
             <Font name="Calibri Bold" size="17.0" />
          </font>

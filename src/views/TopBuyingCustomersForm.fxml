@@ -16,12 +16,12 @@
           <NumberAxis side="LEFT" />
         </yAxis>
       </BarChart>
-       <Button fx:id="btnLogOut" layoutX="1138.0" layoutY="4.0" onAction="#logOutAction" prefHeight="34.0" prefWidth="139.0" style="-fx-background-color: #f22613;" text="Log Out" textFill="WHITE">
+       <Button fx:id="btnLogOut" layoutX="876.0" layoutY="4.0" onAction="#logOutAction" prefHeight="34.0" prefWidth="139.0" style="-fx-background-color: #f22613;" text="Log Out" textFill="WHITE">
            <font>
                <Font name="Calibri Bold" size="17.0" />
            </font>
        </Button>
-       <Button fx:id="btnAdminMenu" layoutX="1138.0" layoutY="47.0" onAction="#menuAction" prefHeight="34.0" prefWidth="139.0" style="-fx-background-color: #f22613;" text="Admin Menu" textFill="WHITE">
+       <Button fx:id="btnAdminMenu" layoutX="1021.0" layoutY="4.0" onAction="#menuAction" prefHeight="34.0" prefWidth="139.0" style="-fx-background-color: #f22613;" text="Admin Menu" textFill="WHITE">
            <font>
                <Font name="Calibri Bold" size="17.0" />
            </font>

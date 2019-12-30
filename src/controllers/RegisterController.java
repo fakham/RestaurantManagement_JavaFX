@@ -59,7 +59,7 @@ public class RegisterController implements Initializable {
             Session.setConnectedClient(client);
 
             try {
-                AnchorPane pane = FXMLLoader.load(getClass().getResource("/views/MainMenuAdmin.fxml"));
+                AnchorPane pane = FXMLLoader.load(getClass().getResource("/views/Login.fxml"));
                 root.getChildren().setAll(pane);
             } catch (IOException e) {
                 e.printStackTrace();
