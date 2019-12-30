@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="600.0" prefWidth="1033.0" xmlns="http://javafx.com/javafx/8.0.171"
+            prefHeight="600.0" prefWidth="1291.0" xmlns="http://javafx.com/javafx/8.0.171"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DessertsController">
     <children>
         <AnchorPane prefHeight="600.0" prefWidth="227.0" style="-fx-background-color: #b71c1c;">

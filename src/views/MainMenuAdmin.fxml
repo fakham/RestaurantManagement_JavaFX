@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane fx:id="root" maxHeight="600.0" maxWidth="800.0" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: white;" styleClass="mainFxmlClass"
+            prefHeight="600.0" prefWidth="1291.0" style="-fx-background-color: white;" styleClass="mainFxmlClass"
             xmlns="http://javafx.com/javafx/8.0.201" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainMenuAdminController">
     <children>
         <Label layoutX="69.0" layoutY="309.0" opacity="0.9" prefHeight="279.0" prefWidth="309.0"
